@@ -4,6 +4,8 @@ Official implementation of **ChemSpacE**, an efficient and effective approach to
 
 [TMLR paper link](https://openreview.net/forum?id=C1Xl8dYCBn)
 
+![](img/chemspace_framework.png)
+
 ## Setup and Installation
 
 ### Environment Setup
