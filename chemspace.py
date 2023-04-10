@@ -315,7 +315,7 @@ def traverse_multi_prop(filepath, model, data, directions, num_range, path_len=1
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--data_dir", type=str, default='../data')
+    parser.add_argument("--data_dir", type=str, default='data')
     parser.add_argument('--data_name', type=str, choices=['qm9', 'zinc250k'], required=True,
                         help='dataset name')
     parser.add_argument("--snapshot_path", "-snapshot", type=str, default='model_snapshot_epoch_200')

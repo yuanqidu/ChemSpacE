@@ -147,7 +147,7 @@ def read_svm_results(file, prop_pred, save_dir):
     plt.clf()
 
 def cal_prop_range(dataset_name, prop_pred):
-    dataset = pd.read_csv(f'../data/{dataset_name}.csv')
+    dataset = pd.read_csv(f'data/{dataset_name}.csv')
     dataset = pd.concat([dataset['smiles']],axis=1)
     smiles = dataset['smiles']
     smiles = smiles.to_numpy()
@@ -166,7 +166,7 @@ def cal_prop_range(dataset_name, prop_pred):
     new_frames = [dataset]
     new_frames.extend(frames)
     new_dataset = pd.concat(new_frames,axis=1)
-    new_dataset.to_csv(f'../data/{dataset_name}_props.csv')
+    new_dataset.to_csv(f'data/{dataset_name}_props.csv')
     extract_names = ['smiles']
     extract_names.extend(prop_names)
     min_max_stats = new_dataset[extract_names].agg(['min','max'])

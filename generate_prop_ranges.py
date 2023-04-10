@@ -50,7 +50,7 @@ def cache_prop_pred():
     return prop_pred
 
 def main():
-    with open('../data/zinc250k.csv') as f:
+    with open('data/zinc250k.csv') as f:
         train_smiles = [line.split(',', 2)[1] for line in f]
     train_smiles = train_smiles[1:]
     print(len(train_smiles))
@@ -68,7 +68,7 @@ def main():
 
     range_df = pd.DataFrame(prop_ranges, props)
     print(range_df)
-    range_df.to_pickle('../data/zinc250k_range.pkl')
+    range_df.to_pickle('data/zinc250k_range.pkl')
 
 if __name__ == '__main__':
     main()

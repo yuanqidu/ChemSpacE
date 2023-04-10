@@ -227,12 +227,12 @@ def smile_cvs_to_property(data_name='zinc250k'):
     if data_name == 'qm9':
         # Total: 133885	 Invalid: 0	 bad_plogp: 0 	 bad_qed: 0
         atomic_num_list = [6, 7, 8, 9, 0]
-        filename = '../data/qm9.csv'
+        filename = 'data/qm9.csv'
         colname = 'SMILES1'
     elif data_name == 'zinc250k':
         # Total: 249455	 Invalid: 0	 bad_plogp: 0 	 bad_qed: 0
         atomic_num_list = zinc250_atomic_num_list
-        filename = '../data/zinc250k.csv'
+        filename = 'data/zinc250k.csv'
         colname = 'smiles'
 
     df = pd.read_csv(filename)
@@ -328,10 +328,10 @@ def load_property_csv(data_name, normalize=True):
     """
     if data_name == 'qm9':
         # Total: 133885	 Invalid: 0	 bad_plogp: 0 	 bad_qed: 0
-        filename = '../data/qm9_property.csv'
+        filename = 'data/qm9_property.csv'
     elif data_name == 'zinc250k':
         # Total: 249455	 Invalid: 0	 bad_plogp: 0 	 bad_qed: 0
-        filename = '../data/zinc250k_property.csv'
+        filename = 'data/zinc250k_property.csv'
 
     df = pd.read_csv(filename)  # qed, plogp, smile
     if normalize:
@@ -353,10 +353,10 @@ def load_property_csv(data_name, normalize=True):
 def load_new_property_csv(data_name):
     if data_name == 'qm9':
         # Total: 133885	 Invalid: 0	 bad_plogp: 0 	 bad_qed: 0
-        filename = '../data/new_qm9_property.csv'
+        filename = 'data/new_qm9_property.csv'
     elif data_name == 'zinc250k':
         # Total: 249455	 Invalid: 0	 bad_plogp: 0 	 bad_qed: 0
-        filename = '../data/new_zinc250k_property.csv'
+        filename = 'data/new_zinc250k_property.csv'
 
     df = pd.read_csv(filename)  # qed, plogp, smile
     df = df[['drd2', 'jnk3', 'gsk3b', 'smile']]
@@ -718,7 +718,7 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--model_dir", type=str, default='./results', required=True)
-    parser.add_argument("--data_dir", type=str, default='../data')
+    parser.add_argument("--data_dir", type=str, default='data')
     parser.add_argument('--data_name', type=str, default='qm9', choices=['qm9', 'zinc250k'],
                         help='dataset name')
     parser.add_argument("--snapshot_path", "-snapshot", type=str, required=True)
