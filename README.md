@@ -21,21 +21,18 @@ conda env create -f environment.yml
 
 Generate molecular graphs from SMILES strings:
 ```
-cd moflow/data
+cd data
 python data_preprocess.py --data_name zinc250k
 ```
 
 ### Download Trained Models
 ```
-https://bit.ly/chemspace-moflow-models
+https://bit.ly/chemspace-models
 ```
+Trained MoFlow models were obtained from https://github.com/calvin-zcx/moflow. 
+
 
 ## ChemSpacE Method
-
-Navigate to the moflow/mflow directory for all the following commands. From the base directory:
-```
-cd moflow/mflow
-```
 
 ### Randomly Generate Molecules 
 ```

@@ -67,10 +67,10 @@ def load_property_csv(data_name, normalize=True):
     """
     if data_name == 'qm9':
         # Total: 133885	 Invalid: 0	 bad_plogp: 0 	 bad_qed: 0
-        filename = '../data/qm9_property.csv'
+        filename = 'data/qm9_property.csv'
     elif data_name == 'zinc250k':
         # Total: 249455	 Invalid: 0	 bad_plogp: 0 	 bad_qed: 0
-        filename = '../data/zinc250k_property.csv'
+        filename = 'data/zinc250k_property.csv'
 
     df = pd.read_csv(filename)  # qed, plogp, smile
     if normalize:
@@ -93,7 +93,7 @@ def load_property_csv(data_name, normalize=True):
 def get_parser():
     parser = argparse.ArgumentParser()
     # data I/O
-    parser.add_argument('-i', '--data_dir', type=str, default='../data', help='Location for the dataset')
+    parser.add_argument('-i', '--data_dir', type=str, default='data', help='Location for the dataset')
     parser.add_argument('--data_name', type=str, default='qm9', choices=['qm9', 'zinc250k'], help='dataset name')
     # parser.add_argument('-f', '--data_file', type=str, default='qm9_relgcn_kekulized_ggnp.npz', help='Name of the dataset')
     parser.add_argument('-o', '--save_dir', type=str, default='results/qm9',

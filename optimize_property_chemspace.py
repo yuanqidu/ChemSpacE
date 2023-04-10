@@ -237,10 +237,10 @@ def load_property_csv(data_name):
     """
     if data_name == 'qm9':
         # Total: 133885	
-        filename = '../data/qm9_properties.csv'
+        filename = 'data/qm9_properties.csv'
     elif data_name == 'zinc250k':
         # Total: 249455	
-        filename = '../data/zinc250k_properties.csv'
+        filename = 'data/zinc250k_properties.csv'
 
     df = pd.read_csv(filename)  # smile,qed,plogp,MolLogP,MolWt,sa,drd2,jnk3,gsk3b 
 
@@ -730,7 +730,7 @@ if __name__ == '__main__':
     print("Start at Time: {}".format(time.ctime()))
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--data_dir", type=str, default='../data')
+    parser.add_argument("--data_dir", type=str, default='data')
     parser.add_argument('--data_name', type=str, choices=['qm9', 'zinc250k'], required=True,
                         help='dataset name')
     parser.add_argument("--snapshot_path", "-snapshot", type=str, default='model_snapshot_epoch_200')

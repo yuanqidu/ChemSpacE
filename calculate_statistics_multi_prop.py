@@ -93,13 +93,13 @@ args = parser.parse_args()
 
 # props = ['MaxEStateIndex', 'MinEStateIndex', 'MaxAbsEStateIndex', 'MinAbsEStateIndex', 'qed', 'MolWt', 'HeavyAtomMolWt', 'ExactMolWt', 'NumValenceElectrons', 'NumRadicalElectrons', 'MaxPartialCharge', 'MinPartialCharge', 'MaxAbsPartialCharge', 'MinAbsPartialCharge', 'FpDensityMorgan1', 'FpDensityMorgan2', 'FpDensityMorgan3', 'MWHI', 'MWLOW', 'CHGHI', 'CHGLO', 'LOGPHI', 'LOGPLOW', 'MRHI', 'MRLOW', 'BalabanJ', 'BertzCT', 'Chi0', 'Chi0n', 'Chi0v', 'Chi1', 'Chi1n', 'Chi1v', 'Chi2n', 'Chi2v', 'Chi3n', 'Chi3v', 'Chi4n', 'Chi4v', 'HallKierAlpha', 'Ipc', 'Kappa1', 'Kappa2', 'Kappa3', 'LabuteASA', 'VSA13', 'VSA14', 'TPSA', 'EState1', 'EState10', 'EState2', 'EState3', 'EState4', 'EState5', 'EState6', 'EState7', 'EState8', 'EState9', 'FractionCSP3', 'HeavyAtomCount', 'NHOHCount', 'NOCount', 'NumAliphaticCarbocycles', 'NumAliphaticHeterocycles', 'NumAliphaticRings', 'NumAromaticCarbocycles', 'NumAromaticHeterocycles', 'NumAromaticRings', 'NumHAcceptors', 'NumHDonors', 'NumHeteroatoms', 'NumRotatableBonds', 'NumSaturatedCarbocycles', 'NumSaturatedHeterocycles', 'NumSaturatedRings', 'RingCount', 'MolLogP', 'MolMR', 'noTert', 'ArN', 'N', 'NH', 'COO2', 'noCOO', 'S', 'HOCCN', 'Imine', 'NH0', 'NH1', 'NH2', 'Ndealkylation1', 'Ndealkylation2', 'Nhpyrrole', 'SH', 'aldehyde', 'carbamate', 'halide', 'oxid', 'amide', 'amidine', 'aniline', 'methyl', 'azide', 'azo', 'barbitur', 'benzene', 'benzodiazepine', 'bicyclic', 'diazo', 'dihydropyridine', 'epoxide', 'ether', 'furan', 'guanido', 'halogen', 'hdrzine', 'hdrzone', 'imidazole', 'imide', 'isocyan', 'isothiocyan', 'ketone', 'Topliss', 'lactam', 'lactone', 'methoxy', 'morpholine', 'nitrile', 'nitro', 'arom', 'nonortho', 'nitroso', 'oxazole', 'oxime', 'hydroxylation', 'phenol', 'noOrthoHbond', 'acid', 'piperdine', 'piperzine', 'priamide', 'prisulfonamd', 'pyridine', 'quatN', 'sulfide', 'sulfonamd', 'sulfone', 'acetylene', 'tetrazole', 'thiazole', 'thiocyan', 'thiophene', 'alkane', 'urea']
 # props = ['qed', 'SA', 'DRD2', 'JNK3', 'GSK3B', 'MolWt', 'MolLogP', 'BalabanJ', 'BertzCT', 'CHGHI', 'CHGLO', 'acetylene', 'tetrazole', 'thiazole', 'thiocyan']
-with open('../data/'+args.dataset+'.txt') as f:
+with open('data/'+args.dataset+'.txt') as f:
     train_smiles = [line.strip("\r\n ") for line in f]
 
 
 prop_pred = cache_prop_pred()
 # prop_range_pd = pickle.load(open(f'{args.dataset}_range.pkl','rb'))
-prop_range_pd = pickle.load(open('../data/zinc250k_range.pkl','rb'))
+prop_range_pd = pickle.load(open('data/zinc250k_range.pkl','rb'))
 prop_range_pd = prop_range_pd.T
 print(prop_range_pd.keys())
 # prop_names = list(prop_pred.keys())
