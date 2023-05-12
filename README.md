@@ -83,3 +83,17 @@ python optimize_property_chemspace.py --data_name zinc250k --path_range 30 --sim
 ```
 python optimize_property_chemspace.py --data_name zinc250k --path_range 30 --sim_cutoff 0.6 --property_name qed_plogp --save_path qed_plogp_0.6_range30 --multi_property --consopt
 ```
+
+## Cite us
+```
+@article{
+  du2023chemspace,
+  title={ChemSpacE: Interpretable and Interactive Chemical Space Exploration},
+  author={Yuanqi Du and Xian Liu and Nilay Mahesh Shah and Shengchao Liu and Jieyu Zhang and Bolei Zhou},
+  journal={Transactions on Machine Learning Research},
+  issn={2835-8856},
+  year={2023},
+  url={https://openreview.net/forum?id=C1Xl8dYCBn},
+  note={}
+}
+```
